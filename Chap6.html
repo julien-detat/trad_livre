@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapitre 6</title>
+</head>
+<body>
+
+ 
+<p>STEPS [Etapes]:
+
+“steps” 
+
+"Il faut toujours concevoir une chose en envisageant l’amélioration possible", a déclaré l'architecte finlandais Eliel Saarinen. "Une chaise dans une pièce, une pièce dans une maison, une maison dans un environnement, un environnement dans un plan de ville.”
+
+
+À première vue, le web design semble être une sorte de design graphique. L'utilisation d'outils de conception graphique comme Photoshop pour concevoir des sites Web renforce cette vision. Mais pour aller au cœur de l'objectif d'un site Web, il faut considérer l'interface dans son contexte plus large : qu'est-ce que les gens essaient d'accomplir ?
+
+Quand tu design pour le web c’est tentant de penser que en [qu’en moyens nécessitant des interactions telles que] interaction comme taper, cliquer, faire défiler, glisser-déposer.
+Mais très peu de gens se réveillent le matin en se disant qu’ils allaient juste faire des tapotements ou des défilements sur leurs téléphones. Ils sont plus susceptibles de penser en termes de lecture, d'écriture, de partage, d'achat et de vente. Les concepteurs Web doivent voir au-delà des actions que l’utilisateur effectue mais de [mais faire] faire en sorte de trouver les choses les plus significatifs [significatives] pour l’utilisateur.
+
+Dans ce livre [“]Designing With Progressive Enhancement[”] , the Filament Group1 définit cette technique et l’appel “ la perspective des rayons x ” 
+
+
+“ Prendre une perspective radiographique, c'est regarder "à travers" les widgets complexes et les styles visuels d'un design, identifier le contenu principal et les éléments fonctionnels qui composent la page, et trouver un simple équivalent HTML pour chacun d'eux qui fonctionnera de façon universelle. ”
+
+
+Si vous n'êtes pas habitué à cette approche de la conception Web, cela peut prendre du temps pour s'y habituer. Mais [Au bout d’un…] au bout d’un certain temps c’est facile [il est facile] de s’y habituer et [mais après il devient] après c’est compliqué de ne pas juger un site. C'est comme essayer de ne pas voir la flèche dans l'espace blanc du logo FedEx, ou essayer de ne pas se rappeler que tous les canards portent en fait un masque de chien.
+
+Ce bec de canard ressemble au visage d'un chien.
+Photographie : Asmaa Dee.
+Sous licence Creative Commons Attribution-NonCommercial-NoDerivs 2.0 Licence générique.
+
+
+
+
+Voici une approche en trois étapes que j’adopte pour la conception de sites web :
+
+1.Identifier les fonctionnalités de base 
+2.Utiliser la technologie la plus simple possible [effacer possible → répétition] pour rendre la fonctionnalité possible 
+3.Améliorer!
+
+Identifier les fonctionnalités de base peut sembler assez simple, et après un peu de pratique, c'est le cas [et ça devient le cas après un peu de pratique]. Mais il peut être difficile au début de séparer ce qui est vraiment nécessaire de ce qui est agréable à avoir.
+
+Information
+
+Disons que vous êtes un fournisseur de nouvelles. C'est là que se trouve la fonctionnalité de base, à savoir fournir des nouvelles. Il y a beaucoup, beaucoup d'autres services que vous pourriez également fournir ; puzzles interactifs, notifications en temps réel, et plus encore. Aussi précieux que soient ces services, ils ne sont probablement pas aussi importants que de s'assurer que les gens ont [aient]  accès aux nouvelles.
+
+
+
+Une fois cette fonctionnalité de base identifiée, il est temps de passer à la deuxième étape : comment pouvez-vous rendre cette fonctionnalité de base disponible en utilisant la technologie la plus simple ?
+
+Théoriquement, un fichier texte serait le moyen le plus simple de fournir les nouvelles.
+Mais [comme] il s'agit spécifiquement du web, comment rendre les fonctionnalités de base disponibles en utilisant la technologie web la plus simple possible ? Ce serait un fichier HTML avec une URL. [pour rendre les fonctionnalités de bases disponibles en utilisant la technologie web la plus simple, la meilleur méthode serait d’utiliser un fichier HTML avec une URL]
+
+Même à ce stade précoce, il est possible de [trop] compliquer les choses [pour rien]. Le HTML pourrait être inutilement gonflé. L'URL pourrait être compliquée, difficile à partager ou difficile de s’en rappeler [ou à retenir].
+
+Maintenant que les nouvelles [news] ont été balisées avec les éléments HTML appropriés - articles, titres, paragraphes, listes et images - il est temps de passer à la troisième étape : améliorer !
+
+Par défaut, les nouvelles [news] seront présentées à l'aide de la feuille de style du navigateur. C'est lisible, mais pas vraiment agréable. En appliquant votre propre CSS, vous pouvez sculpter le contenu dans une forme plus agréable. Espaces blancs, plomb, couleurs et contrastes sont à votre disposition. Vous pouvez même utiliser des polices personnalisées - une amélioration qui a été impossible sur le Web pendant de nombreuses années.
+Il n’y a aucune garantie que les déclarations CSS puisse être lu par tous les navigateurs. C'est pas grave. Ces navigateurs ignorent ce qu'ils ne comprennent pas. Et surtout, les nouvelles [news] sont toujours accessibles à tous, quelles que soient les capacités CSS de leur navigateur.
+
+Pour les navigateurs sur les appareils à grand écran, vous pouvez introduire la mise en page. Il peut sembler étrange au premier abord de considérer la mise en page comme une amélioration, mais c'est la leçon d'un design mobile‐first responsive . Considérez d'abord le contenu, puis marquez-le avec un ordre de source raisonnable, puis appliquez les déclarations de mise en page dans les requêtes média.
+
+Grâce à la constante évolution du CSS, il existe de multiples façons d'appliquer la mise en page. Comme Andy Tanenbaum l'a dit :
+
+“ Ce qu'il y a de bien avec les normes, c'est qu'il y a tellement de choix.”
+
+Communication
+
+L'application du processus en trois étapes à un site de nouvelles [news] est relativement simple. Poster l'actualité est un acte assez passif. Pour vraiment tester ce processus, nous devons l'appliquer à quelque chose de plus interactif.
+
+Supposons que nous construisions un réseau social. Les personnes qui utilisent notre outil doivent pouvoir communiquer entre elles, peu importe où elles se trouvent dans le monde. La fonctionnalité de base est l'envoi et la réception de messages.
+
+Juste quelques-uns des sites de réseaux sociaux qui ont honoré le Web.
+
+L'affichage des messages dans un navigateur Web n'est pas difficile. Il peut y avoir beaucoup de complexité sur le serveur impliquant des bases de données, la synchronisation, la mise en file d'attente et l'équilibrage de charge, mais le HTML nécessaire pour structurer une liste chronologique n'est pas très différent du HTML nécessaire pour un site de nouvelles.
+
+L'envoi d'un message depuis le navigateur vers le serveur web nécessite un HTML interactif. C'est là que les formulaires entrent en jeu. Dans ce cas, un formulaire avec une saisie de texte et un bouton “submit”’ devrait suffire, au moins pour la fonctionnalité de base.
+
+Les gens peuvent maintenant recevoir et répondre aux messages sur notre réseau social, peu importe le type d'appareil ou de navigateur qu'ils utilisent. L'astuce consiste maintenant d’améliorer l'expérience sans briser cette activité fondamentale.
+
+Si nous laissions le site dans cet état uniquement HTML, je ne pense pas que nous célébrerons l'introduction en bourse de notre société dans un avenir proche. Pour vraiment nous démarquer de la concurrence, nous avons besoin de cette troisième étape du processus : améliorer !
+
+À tout le moins, nous pouvons appliquer la même logique que nous avons utilisée pour le site de nouvelles et le style de notre service. En utilisant CSS, nous pouvons fournir la couleur, la texture, le contraste, les polices Web et, pour les grands écrans, la mise en page. Mais ne nous arrêtons pas à la présentation. Améliorons aussi l'interaction.
+
+À l'heure actuelle, ce réseau social a le même type d'interaction basée sur les pages qu'un site de nouvelles. Chaque fois que quelqu'un envoie un message au serveur, le serveur renvoie une nouvelle page entière au navigateur. Nous pouvons faire mieux que cela. C'est l'heure de l'Ajax.
+
+Nous pouvons intercepter la soumission du formulaire et envoyer les données au serveur en utilisant Ajax-I comme le mot Hijax pour décrire ce type d'interception Ajax. S'il y a une réponse du serveur, nous pouvons aussi mettre à jour une partie de la page en cours au lieu de rafraîchir la page entière. Ce serait aussi un bon moment pour présenter une animation appropriée.
+
+Nous pouvons aller plus loin. Les navigateurs qui prennent en charge les WebSockets peuvent recevoir des messages du serveur. Les personnes qui utilisent ces navigateurs pourraient recevoir des mises à jour dès qu'elles ont été envoyées. Il est même possible d'utiliser des connexions peer-to-peer entre navigateurs pour permettre aux gens de communiquer directement.
+
+Tous les navigateurs ne prennent pas en charge cette fonctionnalité avancée. C'est pas grave. La fonctionnalité de base - envoyer et recevoir des messages - est toujours accessible à tous.
+</p>
+
+
+
+</body>
+</html>
