@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>
+
+CHAPITRE 4: LANGAGES
+
+LANGUES  
+
+JON POSTEL ÉTAIT L’UN DES 
+ingénieurs travaillant sur l’ARPANET, le précurseur d’Internet. L'objectif de ses travaux était de trouver le moyen le plus simple et efficace possible de parvenir à destination les paquets ou datagrams envoyés sur le réseau.)
+Selon lui, Il a réalisé qu’une approche laxiste vis à vis de l’erreur était cruciale pour l’efficacité de l’échange des paquets. (Il est arrivé à la conclusion qu’une haute tolérance à l’erreur était cruciale si l’on voulait pouvoir échanger des datas de manière efficace.)
+
+<'Image' de Jon Postel & tableau “Jon Postel. Photograph by irene fertik, usc News Service. Copyright 1994.” >
+
+Si un noeud sur le réseau reçoit un datagram contenant des erreurs mais néanmoins compréhensible, le paquet doit tout de même être traité. A l’inverse, tous les noeuds du réseau doivent essayer d’envoyer des paquets bien constitués. Cette ligne de pensée fut consacrée par le principe de Robustesse, aussi appelé Loi de Postel :
+« Soyez conservateur dans ce que vous envoyez; soyez libéral dans ce que vous acceptez. »
+
+Cela vous dit quelque chose, c’est surement parce que c’est exactement l’attitude des navigateurs web vis à vis du html et css. Même si le html et le css contiennent des erreurs, le navigateur web s’obstinera à traiter les informations en ignorant les éléments qu’il n’arrive pas à analyser.
+
+DÉCLARATION
+
+HTML et CSS sont tout les deux des exemples de langages déclaratifs. Un auteur écrivant dans un language déclaratif décrit un résultat souhaité sans fournir les instructions étape par étape à l’ordinateur qui traite le fichier. Avec l’HTML, vous pouvez décrire la nature du contenu, des paragraphes, des titres, des champs de formulaire, etc; sans avoir à expliquer exactement ce que le navigateur doit faire avec ces informations. Le CSS quant à lui, vous permet de décrire l’apparence désirée du contenu; les couleurs, les bordures, etc; sans avoir à écrire un programme pour appliquer ces styles.
+
+La plupart des langages ne sont pas déclaratifs, ils sont impératifs. Perl, Java, C++… Sont autant d’exemples de langages impératifs. Si vous écrivez dans l’un de ces langages, vous devez fournir des instructions précises à l’ordinateur qui interprétera votre code.  
+
+Si les langages impératifs vous donnent plus de puissance et de précision que les langages déclaratifs, cet avantage a un prix. Les langages impératifs ont tendance à être plus difficiles à apprendre que les langages déclaratifs. C’est aussi plus compliqué d’y appliquer la Loi de Postel.Une seule erreur; virgule ou un point-virgule mal placé; et c’est le programme entier qui peut échouer. Si, Un élément mal orthographié en HTML ou une accolade manquante en CSS peut causer des maux de tête, les programmes impératifs quant à eux doivent absolument être bien formés ou ils ne fonctionneront pas du tout.
+
+Les langages impératifs tels que PHP, Ruby, et Python sont les langages communément utilisé sur le World Wide Web, lisant et écrivant les enregistrements des bases de données, traitant des entrées, et éxécutant des algorithmes complexes.
+Dès lors que vous écrivez du côté du serveur, vous pouvez choisir le langage de programmation. Si vous ne pouvez pas connaître l’identité de l’utilisateur final du navigateur, vous pouvez contrôler les capacités de votre serveur.
+
+Si vous voulez utiliser un code impératif fonctionnant sur un navigateur web, Javascript est votre unique option.
+
+
+SCRIPTAGE
+
+L’idée d’exécuter un programme depuis l’intérieur d’une page web est aussi vieille que le web lui-même. Voici un e-mail provenant d’une discussion sur le WWW:
+
+« Je voudrais savoir, si oui ou non quelqu’un a élargi WWW de façon qu’il serait possible de démarrer des programmes arbitrairement en appuyant un bouton dans le navigateur web.  »
+
+Auquel Tim Berners-Lee, le créateur du World Wide Web, a répondu :
+
+« Très bonne question. Le problème est le langage de programmation. Vous avez besoin de quelque chose de vraiment puissant, mais en même temps omniprésent. Rappelez vous qu’une facette du web est un lectorat universel. Or il n’existe pas de langage de programmation universel.»
+
+C’était en 1992. 4 ans plus tard, le premier langage de programmation universel apparu en 1996. Il fut écrit en 10 jours par un programmeur de Netscape nommé Brendan Eich.
+
+Le langage a changé plusieurs fois de noms. D’abord appelé Mocha, puis officiellement lancé sous le nom de LiveScript.
+Finalement, le département marketing décida de le renommer Javascript, en espérant que le nom surferait sur la vague de battage médiatique provoquée par le nouveau langage Java. Mais, ces langages n’ont rien en commun. Java est à JavaScript comme jambon est à hamster.  
+
+LES MODÈLES DE PROGRÈS
+
+JavaScript a permis aux web designers de modifier les pages web après leur publication. Rapidement, deux façons de procédé sont apparues : les renversements et la validation de formulaire.
+
+Si aujourd’hui afficher des images lors du suvol d’un lien peut sembler être un usage impertinent d’un langage de programmation, dans les années 90, il n’y avait pas d’autre moyen de créer un effet de survol.
+
+Avant Javascript, un formulaire devait être envoyé à un serveur web pour s’assurer que tout les champs obligatoires étaient remplis, ou que les informations entrées correspondaient au format demandé.
+
+C’est encore le cas aujourd’hui, mais nous n’avons plus besoin de JavaScript. On peut créer des effets de renversements en utilisant la pseudo-classe css : hover. On peut aussi valider les champs de formulaire en utilisant les éléments html REQUIRED et TYPE. 
+
+Encore et encore, ce schéma se reproduit : une solution est créée dans un langage impératif et si elle devient assez populaire, ce n’est qu’une question de temps avant de la voir migrer vers un langage déclaratif. Quand une fonctionnalité est invalide dans un langage déclaratif, c’est non seulement facile à écrire, c’est aussi plus robuste.
+
+La haute tolérance aux erreurs HTML et CSS signifie que beaucoup d’erreurs de création ou problèmes de support du navigateur sont laissées de côté; le navigateur ignore simplement ce qu’il ne comprend pas et poursuit son analyse. C’est souvent assez bon. En revanche, si vous donnez à un navigateur un code JavaScript mal formé ou tentez d’utiliser un élément qu’il ne supporte pas, non seulement le navigateur affichera une erreur, mais il s’arrêtera d’analyser le script et refusera d’aller plus loin.
+
+RESPONSABILITÉ
+
+JavaScript donne aux designers web le pouvoir de créer des sites lisses, fluides, et plus réactifs. Mais elle leur donne aussi la possibilité de créer des sites lents, lourd et plus difficile à utiliser.  
+
+L’un des premier abus de Javascript surgi (sans surprise) du secteur de l’industrie, un business dont la raison d’être détonne souvent avec avec les objectifs de ceux essayant d’achever une tâche le plus rapidement possible. JavaScript vous permet d’ouvrir des nouvelles fenêtres dans un navigateur, une tâche qui incombait auparavant à l’utilisateur. Un jeune développeur nommé Ethan Zuckerman a découvert qu’il pourrait engendrer une nouvelle fenêtre contenant une publicité dans celle-ci. Cela a permis aux publicitaires de diffuser leurs annonces aux visiteurs du site web. En plus de cela, JavaScript peut être utilisé pour afficher plusieurs fenêtres, certaines visibles, d’autres cachées derrière la fenêtre active (en cours). C’était une solution diabolique.
+
+20 ans plus tard, Zuckerman écrit :
+
+« Je suis celui qui a écrit le code pour lancer une fenêtre contenant une publicité.
+J’en suis désolé. »
+
+Les fenêtres pop-up (et pop-under) sont devenues tellement intolérables que les navigateurs ont dû fournir aux personnes un moyen de les bloquer.
+
+Mais le secteur de la publicité a trouvé d’autres moyens de détourner l’usage de javascript à son avantage. Les éditeurs en ligne bénéficiant d’un soutien publicitaires et injectèrent du JavaScript inefficace sur leurs pages, ce qui les rendait plus lents à charger. JavaScript était aussi utilisé pour traquer les gens d’un site à un autre. Les gens ont donc commencé à recourir à un logiciel pour combattre ce fléau. Finalement, le blocage de publicité fut ajouté dans les navigateurs et les systèmes d’exploitation pour nous permettre de lutter contre l’excès de JavaScript.
+
+Les designers web feraient bien de se rappeler ce que l’industrie de la publicité a choisi d’ignorer; sur le web, l’utilisateur a le dernier mot.
+
+2.0
+
+La montée en puissance du JavaScript s’est intensifiée en 2005 avec la publication d’un article (écrit par Jesse James Garrett,) s’intitulant (intitulé) Ajax: A New Approach to Web Applications de Jesse James Garrett. L’article donne un nom à une technique qui gagnait en popularité. En utilisant un sous-ensemble spécifique du JavaScript, il était possible pour un navigateur web d’envoyer et de recevoir des données provenant d’un serveur web sans avoir à rafraîchir la page entière. Le résultat fut une expérience utilisateur plus fluide.
+
+Le terme d’Ajax a été inventé en même temps qu’un autre néologisme ???? (en même temps qu’un autre néologisme devenait populaire). Tim O’Reilly utilise l’expression “Web 2.0” pour décrire une nouvelle vague de produits et de services du Web. Contrairement à Ajax, il était difficile d’établir une définition du Web 2.0. Pour les hommes d’affaires, cela signifiait (annonçait) de nouveaux modèles d’affaires. Pour les graphistes, cela signifiait (des angles) coins arrondis et dégradés. Pour les développeurs, cela voulait dire JavaScript et Ajax.
+
+Quelle que soit sa signification exacte, le terme Web 2.0 traduit une émotion et un sentiment. Tout était sur le point d’être différent maintenant (de changer). Les (anciennes façons de travailler le web) vieilles façons de penser à la construction du web pourraient être mise de côté. Traiter le Web comme une collection illimitée de documents en hyperlien était quelque chose du passé. L’âge des applications web était à portée de main.
+
+APPINESS
+
+(Lors de) Dans l’affaire Jacobellis contre l’Ohio, en 1964, le juge Potter Stewart (définit l’obscénité de la façon suivante) a donné cette définition de l’obscénité:
+
+“I know it when I see it.” ce qui signifie “Je le sais (la reconnaître) quand je le (la) vois.”
+
+(Ceci est applicable au web) La même chose pourrait être dit pour le Web 2.0, ou pour le terme de “web app” (application web). Nous pouvons tous citer des exemples d'applications Web, mais il est plus délicat de fournir une définition du terme. Les applications web permettent aux utilisateurs de créer, modifier, et supprimer du contenu. Mais ces tâches étaient communes bien avant que les applications web arrivent. Les gens pouvaient remplir un formulaire et le soumettre à un serveur web pour qu’il le traite. Ajax a enlevé la nécessité de ce voyage aller-retour vers le serveur.
+
+Peut-être que la définition d’une application web nécessite un raisonnement circulaire:
+
+JavaScript est requis (nécessaire à) pour une application Web, et
+une application Web est un site Web qui nécessite JavaScript pour fonctionner.
+
+Dans ce cas, la construction d’applications web dépend d’une hypothèse fondamentale: JavaScript doit être disponible/ accessible et fiable. Mais à cause de sa nature impérative, JavaScript tend (à tendance) à être plus fragile qu’un langage déclaratif comme le HTML. (Se reposer sur) Faire confiance à JavaScript pourrait ne pas être une hypothèse si sûre que ça après tout (en fin de compte).
+
+UNFORGIVEN
+
+(La tolérance d’html aux erreurs) La gestion des erreurs d'HTML lui a permis de gagner en puissance avec le temps. Cela a également (démontré) permis d’assurer que (le langage) a langue était facile à apprendre. Même si vous faites une erreur, (l’application) la mise en œuvre de la loi de Postel par le navigateur (vous) garantit (de toujours obtenir) que vous obtiendrez toujours un résultat. Étonnamment, il y a eu une tentative de supprimer cette superpuissance du HTML.
+
+Après la standardisation du HTML version 4 en 1999, le World Wide Web Consortium a publié XHTML 1.0. Cela reformule HTML en fonction des règles du format de données XML.
+Alors que HTML peut avoir des noms et des attributs de balises en majuscules ou en minuscules, XML exige qu’ils soient tous en minuscules. Il y avait d’autres différences: tous les attributs devaient être cités, et les éléments autonomes comme IMG ou BR nécessitaient une barre oblique de fermeture.
+
+XHTML 1.0 n’a pas ajouté de nouvelles fonctionnalités au langage. C’était simplement une manière plus stricte d’écrire le balisage. XHTML 2.0 était une proposition différente. Cela supprimerait non seulement les éléments établis IMG, mais implémenterait également le modèle draconien de traitement des erreurs de XML. S’il existe une seule erreur dans le document XML (un attribut non cité ou une barre de fermeture manquante), alors l’analyseur doit s’arrêter immédiatement et refuser de rendre quoi que ce soit.
+
+XHTML 2.0 est mort sur le fil. Sa pureté théorique a été catégoriquement rejetée par les créateurs de sites Web. Les designers de sites Web ont à juste titre refusé de publier un format qui échouerait complètement au lieu d’essayer de remédier à une erreur.
+
+Étrange alors, que des années plus tard, les concepteurs Web créaient avec joie des sites Web entiers en utilisant JavaScript, un langage qui partage le modèle de traitement d’erreurs impitoyable du XML. Ils ne les appelaient pas des sites Web. Ils les appelaient des applications Web. Cette distinction réconfortait très mal quelqu’un, qui ne pouvait pas accomplir sa tâche parce qu’un service comptait sur JavaScript pour une fonctionnalité cruciale.
+
+Malgré le modèle fragile de traitement des erreurs de JavaScript, les concepteurs Web (deviennent) sont de plus en plus dépendants de JavaScript au fil du temps. En 2015, la NASA a relancé son site Web en tant qu’application Web. Si vous vouliez lire les dernières actualités des efforts d’exploration spatiale de l’agence, vous deviez d’abord télécharger et exécuter trois mégaoctets de JavaScript. Ce contenu (texte et images) aurait pu être délivré en HTML, mais les développeurs ont décidé d’utiliser Ajax pour récupérer ces données. Jusqu’à que tout le JavaScript soit chargé, analysé, et exécuté, les visiteurs du site ont été laissés sur un fond noir. Peut-être s'agissait-il d'une démonstration du vaste vide solitaire de l'espace.
+
+<-image noir site de la NASA- légende: La version 2015 du site de la nasa.gouv avec un JavaScript incomplet.>
+
+Cela souligne une autre différence entre HTML et JavaScript. Alors que le HTML peut être rendu pièce par pièce au fur et à mesure de son téléchargement, un fichier JavaScript doit être téléchargé dans son intégralité avant que son contenu ne puisse être analysé. Bien qu’il soit tentant de penser que seulement une petite minorité des visiteurs ratera le code JavaScript d’un site, la vérité est que tout le monde est un non-JavaScript utilisateur jusqu’à que le JavaScript ait fini de charger… si le JavaScript fini de charger. Des connexions instables, des opérateurs de réseau interférents et un logiciel de blocage des annonces imprévisible, peuvent démentir l’hypothèse selon laquelle JavaScript sera toujours disponible.
+
+Le problème n’est pas que les gens désactivent délibérément JavaScript dans leurs navigateurs. Bien que ce soit un cas d’utilisation qui mérite d’être considéré, ce n’est pas la cause la plus fréquente des erreurs JavaScript. Stuart Langridge a dressé une liste de tous les potentiels points d’échecs  (intitulée) Tout le monde a JavaScript, non?
+
+
+“L’utilisateur demande votre application Web. La page a-t-elle déjà été chargée? La requête HTTP pour le JavaScript a-t-elle réussi? La requête HTTP pour le JavaScript est-elle terminée? Est-ce que le  pare-feu de l’entreprise bloque -t-il le JavaScript? Est-ce que leur FAI (Fournisseur d’Accès à Internet) ou leur opérateur de téléphonie mobile interfère avec le code JavaScript téléchargé ? Ont-ils désactivé le JavaScript? Ont-ils des add-ons ou des plug-ins installés qui injectent le script ou qui modifient le DOM de façon inattendue? Le réseau de diffusion du contenu est-il opérationnel? Est-ce que leur navigateur supporte le JavaScript que vous avez écrit?”
+Beaucoup de ces problèmes affectent également les fichier HTML et CSS, mais grâce à la Loi Postel, ils peuvent être récupérés avec élégance (sans accroc).
+Cela ne veut pas dire que les web designers ne devraient pas utiliser JavaScript. Cela signifie Toutefois (,) que les concepteurs Web (ne devraient pas compter dessus si) ne doivent pas compter sur JavaScript lorsqu' une solution plus simple existe.
+PLATFORM
+(L’erreur des webdesigners ayant ignoré le message de John Allsopp dans son livre A dao of webdesign fut de travailler le web comme on travaille en Print.) Les web designers qui ont ignoré le message de A Dao of Web Design de John Allsopp ont commis l’erreur de traiter le Web comme une impression. L'histoire de l'imprimerie a beaucoup à offrir (certes) (hiérarchie, typographie, théorie des couleurs) mais le Web est un support fondamentalement différent. L’histoire du développement des logiciels (est elle aussi très riche) a aussi beaucoup à offrir (architecture, tests, processus) mais ici encore, le Web reste son propre support (un support à part entière).
+(Bien qu’il puisse être tentant) Il est tentant d’appliquer  de transférer) le savoir et les enseignements d’un autre média au Web. (,) Mais il est plus honnête intellectuellement de (d’explorer les forces et faiblesses propres au web) découvrir les propres forces et faiblesses uniques au web.
+Le langage que nous utilisons peut influencer subtilement notre façon de penser. Dans son livre Metaphors We Live By, George Lakoff souligne les dangers du langage politique. Les exemples évidents sont les “tirs amis” et les “dommages collatéraux”, mais un exemple plus trompeur (encore) est “l’allégement fiscal”. Avant même qu’un débat n’ait (ne) commencé (e), la fiscalité a été conçue comme quelque chose qui nécessite (nécessitant) un allégement.
+A première vue, le terme de “plateforme Web” semble inoffensif. Décrire le Web comme une plateforme le place au même niveau que les autres logiciels. Flash était une plateforme. Android est une plateforme. iOS est une plateforme. Mais le Web n’est pas une plateforme  (n’en est pas une). (Tout l'intérêt du web réside dans le fait) L’intérêt principal du Web est qu’il s’agit d’une plateforme croisée.
+Une plateforme offre un environnement d'exécution contrôlé pour les logiciels. Tant que l’utilisateur disposera de cet environnement d’exécution, vous pouvez être assuré qu’il obtiendra exactement ce que vous avez conçu. Si vous créez une application iOS et que quelqu’un possède un appareil iOS, vous savez qu’ il obtiendra 100% (la totalité) de votre logiciel. Mais si vous créez une application iOS et que quelqu’un a un appareil Android, il (ne pourront pas y accéder) obtiendra 0% de votre logiciel. Vous ne pouvez pas installer une application iOS sur un appareil Android. C’est tout ou rien.
+Le Web n’est pas aussi binaire que ça. Si vous créez quelque chose à l'aide de technologies Web et que quelqu'un visite avec un navigateur Web, vous ne pouvez pas savoir avec certitude combien de technologies Web seront prises en charge. (Elles ne le seront probablement pas toutes) Ce ne sera probablement pas à 100%. Mais il est également peu probable (qu’aucune ne soit prise en charge) que ce soit 0%. Certaines personnes visiteront (navigueront) avec des appareils iOS . D'autres visiteront avec (utiliseront) des appareils Android. Certaines personnes obtiendront 80% ou 90% de ce que vous avez conçu. Les autres ne recevront que 20%, 30% ou 50%. Le Web n'est pas une plateforme. C'est un continuum.
+Considérer le Web comme une plateforme (,c’est le placer dans la mauvaise catégorie) est une erreur de catégorie. (Les plateformes) Une plateforme telle que Flash, iOS ou Android offre (garantissent une certaine stabilité) stabilité et certitude, mais seulement (si certaines conditions très spécifiques sont réunies:) sous un ensemble de circonstances très spécifiques: vous devez accéder à votre logiciel (via la bonne plateforme et avec l’environnement d'exécution approprié) avec l'environnement d'exécution spécifique à la plate-forme approprié. (Certes,) Le Web n'apporte pas cette certitude, mais il ne restreint pas non plus (le nombre des) les environnements d'exécution possibles.
+(si) Les plateformes sont contrôlées et prévisibles. (,) Le World Wide Web est (lui,) chaotique et imprévisible.
+(en bref,) Le web est un beau bordel.
+
+</p>
+
+</body>
+</html>
