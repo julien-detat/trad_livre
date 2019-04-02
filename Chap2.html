@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>
+
+MATÉRIAUX
+
+AU RISQUE D’APPRENDRE au vieux singe à faire la grimace, j’aimerais que vous réfléchissiez à ce qui se passe quand un navigateur analyse un élément HTML. Prenons, par exemple, un élément de paragraphe contenant du texte. Il est composé d’une une balise P d’ouverture, une balise P de fermeture, et entre ces balises il y a le texte.
+
+<'p'>du texte<'/p'>
+
+Un navigateur Web qui rencontre cet élément affichera le texte entre les balises d’ouverture et de fermeture. Pensez maintenant à ce qui se passe lorsque ce même navigateur Web rencontre un élément qu’il ne reconnaît pas.
+
+<'marklar'>encore du texte<'/marklar'>
+
+Une fois encore, le navigateur affiche le texte entre les balises d'ouverture et de fermeture. Ce qui est intéressant ici, c'est ce que le navigateur ne fait pas. Le navigateur ne génère pas d'erreur. Le navigateur n'arrête pas d'analyser le code HTML à ce stade, refusant d'aller plus loin. Au lieu de cela, il ignore simplement les balises et affiche le contenu qu’elles contiennent à l'intérieur. 
+
+Cette attitude libérale à l'égard des erreurs a permis au vocabulaire HTML d'évoluer au fil du temps, passant des 21 éléments originaux aux 121 éléments du HTML5. Chaque fois qu'un nouvel élément est introduit dans le HTML, nous savons exactement comment les anciens navigateurs le traiteront ; ils ignoreront les balises et afficheront le contenu.
+
+C'est une caractéristique remarquablement puissante. Cela permet aux navigateurs d'implémenter de nouvelles fonctionnalités HTML à des rythmes différents. Nous n'avons pas besoin d'attendre que chaque navigateur reconnaisse un nouvel élément. Au lieu de cela, nous pouvons commencer à utiliser le nouvel élément à tout moment, en sachant que les navigateurs non- compatibles ne s’y arrêteront pas.
+
+<'main'> ce texte s'affichera dans n'importe quel navigateur <'/main'>.
+
+Si les navigateurs Web traitent toutes les balises de la même façon - en affichant leur contenu alors à quoi bon avoir un vocabulaire d'éléments en HTML ?
+
+
+LA SIGNIFICATION DU BALISAGE
+
+Certains éléments HTML sont dénués de sens. L'élément SPAN ne dit rien sur son contenu. En ce qui concerne le navigateur Web ? vous pouvez aussi bien utiliser un élément MARKLAR inexistant. Mais, c’est l'exception. La plupart des éléments HTML existent pour une raison. Ils ont été conçu et approuvés afin de tenir compte des situations particulières que des auteurs comme vous et moi, sommes susceptibles de rencontrer.  
+
+Il existe évidemment des éléments spéciaux, comme l’élément A, qui viennent avec des super pouvoirs. Dans le cas de l’élément A, sa surpuissance réside dans l’attribut HREF qui permet de nous relier à toute autre ressource sur le web. D’autres éléments comme INPUT, SELECT, TEXTAREA et BUTTON possède leurs propres super pouvoirs , permettant aux gens d’entrer des données et de les soumettre à un serveur web.
+
+Ensuite, il y a les éléments qui décrivent le type de contenu qu’ils contiennent. Le contenu d’un élément P doit être considéré comme un paragraphe de texte. Le contenu d’un élément LI doit être considéré comme un élément d’une liste. Les navigateurs affichent le contenu de ces éléments avec quelques indications visuelles quant à leur signification. Les paragraphes sont affichés avec des espaces avant et après leur contenu. Les éléments de la liste sont affichés avec des puces ou des chiffres avant leur contenu.
+
+Au début le vocabulaire HTML s’est enrichi de nouveaux éléments qui fournissaient des instructions visuelles aux navigateurs Web : GRAND, PETIT, CENTRE, POLICE. [Comme il s’agit d’instructions HTML peut-être voir à laisser en anglais puisque le HTML est en anglais.]
+En fait, les instructions visuelles étaient la seule raison pour laquelle ces éléments existaient - elles ne fournissaient aucun indice quant à la signification du contenu qu’elles contenaient. Le HTML risquait de devenir un langage d’enseignement [d’instruction] visuel plutôt qu’un vocabulaire de sens. 
+
+
+
+
+A MATTER OF STYLE : UNE QUESTION DE STYLE
+
+Håkon Wium Lie 1 travaillait au CERN en même temps que Tim Berners-Lee. Il a immédiatement reconnu le potentiel du World Wide Web ainsi que de son langage, le HTML. Il s'est également rendu compte que le pouvoir d'expression de la langue risquait d'être submergé par des caractéristiques visuelles. 
+
+Lie a proposé un nouveau format pour décrire la présentation des documents HTML : feuilles de style en cascade ( CSS : Cascading Style Sheets, ce qui donne en français: feuilles de style en cascade). 
+
+Il est rapidement rejoint par le programmeur Néerlandais Bert Bos 2. Ensemble ils ont créé une syntaxe suffisamment puissante pour répondre aux demandes des designers, tout en restant simple pour apprendre rapidement. Ils ont réussi.
+
+Pensez un moment à tous les sites disponibles sur le web. Le style visuel varie énormément : jeux de couleurs, traitements typographiques, textures et mises en page. Toute cette variété est rendu possible par un simple motif qui décrit tout le CSS jamais écrit :
+
+sélecteur	{
+	propriété: valeur;
+}
+
+C’est tout.
+
+Tout comme le langage HTML, le langage CSS peut fonctionner en ignorant certaines erreurs de programmation. Si un navigateur web rencontre un sélecteur qu’il ne comprend pas, il ignore simplement ce qui se trouve entre les accolades de ce sélecteur. Si un navigateur voit une propriété ou une valeur qu’il ne comprend pas, il va juste ignorer cette déclaration. Le navigateur ne génère pas d’erreur. Le navigateur n’arrête pas d’analyser le CSS à ce stade, refusant d’aller plus loin.
+marklar {
+    marklar: marklar;
+}
+Comme avec le HTML, cette gestion des erreurs à permis au CSS de croître avec le temps. Nouveaux sélecteurs, nouvelles propriétés et de nouvelles valeurs ont été ajoutés au vocabulaire de la langue au fils des années. Chaque fois qu’une nouvelle fonctionnalité arrive en CSS, les designers ainsi que les développeurs savent qu’ils peuvent l’utiliser en toute sécurité, même si elle n’est pas encore largement prise en charge par les navigateurs. Ils peuvent être assurés que les anciens navigateurs réagiront avec indifférence face aux nouvelles fonctionnalités. 
+
+Ce n’est pas parce que le langage est élégant et bien conçu que les gens l’utiliseront. Le CSS est arrivé plus tard que le HTML. Durant cette période intermédiaire, les designers n’ont pas attendu patiemment un moyen de styliser leurs documents sur le Web.
+Ils ont utilisé ce qui était disponible pour eux. 
+
+
+
+TUEZ LE
+
+En 1996, David Siegel 3 a publié un livre intitulé “Creating Killer Websites”. Il y présente une série de techniques permettant de “bugger” les dessins accrocheurs avec du langage HTML. [???? → problème dans la phrase]
+
+Une des techniques consiste à utiliser un fichier GIF transparent d’une taille d’un pixel sur un(1x1). Si cela était inséré dans une page en tant qu'élément IMG, mais avec des valeurs précises dans ses attributs WIDTH et HEIGHT, les concepteurs avaient la possibilité de contrôler la quantité d'espaces blancs dans leurs conceptions.
+
+Une autre des techniques utilise l'élément TABLE. Cet élément, avec ses enfants TR et TD, était destiné à décrire des données tabulaires. Mais avec les bonnes valeurs appliquées aux largeurs et aux hauteurs des cellules de tableau, Cela pourrait être utilisé pour recréer à peu près n'importe quelle disposition souhaitée.
+
+C'étaient des bidouillages; solutions intelligentes à des problèmes épineux. Mais ils ont eu des conséquences fâcheuses. Les concepteurs considéraient le HTML comme un outil d’apparence du contenu plutôt qu’un langage permettant de décrire la signification du contenu. Le CSS était une solution à ce problème, si seulement les développeurs pouvaient être convaincus de l’utiliser.
+
+
+LA GUERRE DES NAVIGATEURS
+ 
+Une des raisons pour lesquelles les web designers n’utilisaient pas le CSS était la faible compatibilité avec les navigateurs.
+Revenons à l’époque où il y avait deux navigateurs majeurs se disputant pour l’âme du web :
+Microsoft Internet Explorer et Netscape. Ils étaient incompatibles à cause de leur design de par leur conception.
+Lorsqu’un navigateur inventerait un nouvel élément ou attribut HTML. L’autre inventerait son propre élément ou attribut distinct pour faire exactement la même chose.
+ 
+Peut-être que la réflexion derrière cette stratégie était que les Web designers devaient avoir à choisir quelle propriétés ils allaient utiliser, comme un enfant obligé de choisir entre ses deux parents. En réalité, les Web Designers n'avaient d'autre choix que d'écrire pour les deux navigateurs, ce qui signifiait faire le travail deux fois.
+ 
+Un groupe de Web Designers a décidé que c’en était trop? Ils se sont réunis sous la bannière du Web Standards Project et ont commencé à faire pression sur Microsoft et Netscape pour qu’ils abandonnent leurs méthodes propriétaires et adoptent des normes telles que le CSS.
+ 
+La vague a commencé avec le lancement d’Internet Explorer 5 pour Mac, un navigateur lancé avec une capacité impressionnante à supporter le CSS. Si c’était le futur du Web Design, la vie était sur le point de devenir beaucoup plus productive et créative.
+ 
+Certains Webdesigner avant-gardistes ont saisi tôt les bugs CSS. Ils ont refaçonné  leurs site web en utilisant la CSS pour la mise en page plutôt que les tableaux et les images transparentes (GIF). Fidèle à l’esprit fondateur du Web, ils ont partagé ce qu’ils apprenaient et ont encouragé les autres utilisateurs à passer au CSS.
+ 
+Surement que la meilleure démonstration du pouvoir de la CSS était le site web « CSS Zen Garden» , créé par Dave Shea. C’était une démonstration de designs esthétiques et variés, tous réalisés avec le CSS. Surtout, le HTML est resté le même.
+ 
+
+[IMAGE] 
+[Légende: Sélection de designs du cornucopia? créés pour le CSS Zen Garden.]
+ 
+[Voir le même document HTML stylisé en une multitude de façons différentes a fait ressortir l’un des effets bénéfiques du CSS: la séparation des préoccupations/tâches.]
+
+
+COUPLAGE
+
+Dans n'importe quel système, de l'infrastructure urbaine à un programme informatique, les concepteurs de ce système peuvent choisir dans quelle mesure les éléments du système dépendent les uns des autres. Dans un système étroitement couplé, chaque pièce dépend de chaque pièce. Dans un système à couplage lâche, toutes les pièces sont indépendantes, avec peu ou pas de connaissance des autres pièces.
+
+Dans un système étroitement couplé, chaque partie du système peut faire des suppositions sur les autres parties. Ces systèmes peuvent être conçus assez rapidement, mais à un prix abordable. Ils manquent de résistance. Si une pièce tombe en panne, elle pourrait emporter tout le système avec elle.
+
+La conception d'un système à couplage lâche peut demander plus de travail. L'avantage est que le résultat global est plus résistant à l'échec. Les différentes parties du système peuvent être remplacées avec un minimum d'effets d'entraînement. 
+
+Les hacks mis au point par David Siegel couplent étroitement la structure et la présentation en un seul fichier HTML monolithique. L'adoption du CSS a facilité cette dépendance, rapprochant le web de l'approche modulaire de la philosophie UNIX. Les informations de présentation pourraient être déplacées dans un fichier séparé : une feuille de style. C'est ainsi qu'un seul document HTML au Jardin Zen CSS pouvait s’appliquer à autant de conceptions différentes.
+
+La feuille de style doit encore avoir une certaine connaissance de la structure du document HTML. Très souvent, des " crochets " sont ajoutés dans le balisage pour faciliter le style : valeurs spécifiques des attributs CLASS ou ID, par exemple. Le HTML et le CSS ne sont donc pas complètement séparés. Ils forment un partenariat, mais ils ont aussi un arrangement. Le document de balisage peut décider qu'il veut essayer de voir d'autres feuilles de style parfois. Entre-temps, la feuille de style pourrait éventuellement être appliquée à d'autres documents. Ils sont librement couplés.
+
+
+DANSER SUR L’ARCHITECTURE
+
+Il faut du temps à une discipline pour développer ses propres valeurs de conception. Le design web [Web design] est une discipline récente. Tandis que nous commençons lentement à élaborer notre propre ensemble de principes directeurs, nous pouvons nous inspirer d’autres disciplines.
+
+Le monde de l’architecture a développé son propre ensemble de valeurs de conception au fil des années. Une de ces valeurs est le principe de l'honnêteté matérielle. Un matériau ne doit pas être utilisé en substitution d’un autre. Sinon le résultat final est trompeur.
+
+L'utilisation de TABLES pour la mise en page est matériellement malhonnête. L’élément TABLE est destiné à baliser la structure des données tabulaires. Le résultat final de l’utilisation de TABLES, de l'élément FONT, et les spacerGIFS est une façade. À première vue, tout semble bien mieux, mais cela ne résistera pas au test. Dès qu’un tel site web est soumis à un test de contrainte sur son utilisation réelle sur plusieurs navigateurs, sa façade s’effrite.
+
+L'utilisation du CSS pour la présentation est matériellement honnête - c'est l'utilisation prévue du CSS . Cela permet également au HTML d'être matériellement honnête. Plutôt que d'essayer de remplir deux rôles - structure et présentation -, le HTML peut à nouveau remplir son véritable objectif, marquer le sens du contenu à l’aide de balises.
+
+Il est encore possible d'utiliser CSS pour être matériellement malhonnête. Pendant longtemps, il n'y avait pas de moyen facile d'ajouter des coins arrondis à un élément en utilisant CSS . Au lieu de cela, les concepteurs Web ont trouvé des moyens de résoudre le problème en ajoutant des images d'arrière-plan à l'élément pour simuler le même effet final. Cela a fonctionné jusqu'à un certain point, mais tout comme le hack spaceGIF , c'était une façade. Puis la propriété border‐radius est arrivée. Désormais, les concepteurs peuvent avoir leurs coins arrondis de manière à être matériellement honnête.
+
+l’essentiel est que les concepteurs ont pu utiliser les nouvelles propriétés border‐radius bien avant que tous les navigateurs Web les prennent en charge. Tout cela grâce au modèle libéral de traitement des erreurs de CSS . Les nouveaux navigateurs afficheraient les coins arrondis. Les anciens navigateurs n'enverrait pas d'erreur. Les anciens navigateurs n’arrêteront pas d'analyser le CSS en refusant d'analyser la suite. Ils ignoreront simplement les instructions qu'ils ne comprennent pas et passeront à autre chose. Pas de préjudice, pas de faute.
+
+Bien entendu, cela signifie que le site Web résultant sera différent en fonction du navigateurs. Certaines personnes verront des coins arrondis. D'autres non.
+
+Et c’est bon.
+
+</p>
+
+</body>
+</html>
