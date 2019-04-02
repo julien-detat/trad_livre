@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>
+
+CHAPITRE 5: COUCHES
+
+Dans son livre  “How Buildings Learn”, Stewart Brand souligne une idée de Franck Duffy, un architecte Britannique:
+
+« Un bâtiment correctement conçu a plusieurs couches de longévité. »
+
+
+Duffy appelle ça: des couches de cisaillement. Chacune de ces couches bouge à une échelle de temps différente. Brand approfondi l’idée et propose 6 couches de substitution:
+
+1) Le Lieu— La localisation physique d’un bâtiment change uniquement que sur une échelle de temps géologique.
+
+2) La Structure— Le bâtiment en lui même peut durer (tenir) des siècles.
+
+3) La Peau— La surface extérieure est rénovée ou a une nouvelle couche de peinture toutes les décennies.
+
+4) Les Services— La plomberie et le câblage ont besoin d’être rénovés tous les 10 ans environ.
+
+5) Le plan des lieux - La disposition des murs et des portes peut changer de temps en temps.
+
+6) Les objets — L’agencement des meubles dans une pièce peut changer tous les jours.
+
+< Image du schéma - shearing layers>
+
+L’idée des couches de cisaillement peut aussi être appliquée à nos créations sur le web. Nos noms de domaines sont les sites géologique sur lesquels nous construisons. À l’autre extrémité de l’échelle de temps, le contenu sur le Web —les « choses »—peut être ajouté et mis à jour dans l’heure, la minute, ou même la seconde. Entre les couches il y a des couches de structure, présentations et comportements: HTML, CSS et JavaScript.
+
+Ces couches peuvent être couplées de manières lâche, mais elles ne sont pas complètement indépendantes. Tout comme un bâtiment ne peut avoir de meuble sans avoir d’abord des pièces et des murs, une feuille de style a besoin de quelques balises pour fonctionner. La liaison entre la structure et la présentation est traitée par les sélecteurs dans le CSS: sélecteurs d’éléments, sélecteurs de classe, etc… Avec JavaScript, le couplage est géré par le vocabulaire du modèle de document, ou  DOM.
+
+Dans un autre livre, “The Clock of the Long Now”, Stewart Brand applique l’idée des couches de cisaillement—ou couches progressive—à la civilisation elle-même. La couche qui se déplace le plus lentement est la nature, puis il y a la culture, suivie par le gouvernement, puis les infrastructures, enfin le commerce et la mode sont les couches les plus rapides. Dans cette organisation, chaque couche dépend de la couche inférieure. À son tour, l’accumulation de chaque couche successive permet un «possible adjacent» rempli de plus d’opportunités.
+
+De même, l’expressivité de CSS et JavaScript est seulement rendue possible sur une base de HTML, qui elle même requiert qu’une URL soit accessible, laquelle dépend à son tour du protocole de transfert HyperText, qui repose sur le socle fondamental de  TCP / IP.
+Chacune des couches de cisaillement de la bande peut être décollée pour en révéler une autre. Exécuter ce processus en sens inverse - en appliquant chaque couche à la fois - est un principe clé d’une conception résistante du web.
+
+
+AMÉLIORATION PROGRESSIVE
+
+En 2003, le festival Southby Southwest à Austin, au Texas était à la base un événement pour les musiciens et les cinéastes. Aujourd’hui les morceaux de films et musiques sont éclipsés par la mastodonte de Southby Southwest Interactive, dédié à tout ce qui est numérique. En 2003 South by Southwest Interactive était une petite affaire, entamé dans un coin d’un étage du Centre de Convention d’Austin. Ce fut l'occasion pour quelques web designers et blogueurs de se réunir et de partager des idées. Cette année, Steve Champeon et Nick Finck ont fait une présentation intitulée Inclusive Web Design For the Future with Progressive Enhancement. Ils ont ouvert avec cet appel aux armes:
+
+« Le Web design doit mûrir et accepter les évolutions des dernières années, abandonner les attitudes d'exclusion formées à l'ère de la bulle Internet, réaliser l'avenir de nombreux appareils et plates-formes et séparer le balisage sémantique de la logique et du comportement de présentation. »
+
+Comme Tim Berners‐Lee, Steven Champeon a eu une expérience du travail avec SGML, le langage de balisage qui a lourdement influencé HTML. En traitant des documents devant être réutilisés pour différents résultats, il en est venu à valoriser la séparation de la structure de la présentation. Un document significativement balisé peut être présenté de multiples façons par l’ajout du CSS et du JavaScript.
+
+Cette approche multicouche du Web permet de diffuser le même contenu à un large éventail de personnes. Mais cela ne signifie pas que tout le monde a la même expérience. Champeon s'est rendu compte qu'une forte séparation des problèmes permettrait d'appliquer des améliorations en fonction des capacités du périphérique de l'utilisateur final.
+Pour paraphraser Karl Marx , l’amélioration progressive permet aux concepteurs d’interroger chaque navigateur en fonction de ses capacités et de le livrer à chaque appareil en fonction de ses besoins.
+
+
+
+LES SITES WEB DOIVENT-ILS AVOIR EXACTEMENT LA MÊME APPARENCE DANS TOUS LES SITES WEB ?
+
+Certains concepteurs de sites Web craignaient que l'amélioration progressive soit une camisole pour la créativité. Concevoir le plus petit dénominateur commun ne sonnait pas comme une recette de progrès. Mais c'était un malentendu. L’amélioration progressive demande aux concepteurs de commencer par le plus petit dénominateur commun (un document bien annoté), mais il n’y a pas de limite à ce qu’ils peuvent faire à partir de là.
+
+En fait, c'est la présence même d'une solide base de code HTML qui permet aux concepteurs Web d'expérimenter les CSS les plus récents et les plus performantes. Grâce à la loi de Postel et au modèle de traitement des erreurs de CSS , les concepteurs sont libres d'appliquer des styles qui ne fonctionnent que dans les navigateurs les plus récents.
+
+Cela signifie que tous ne connaîtront pas le même design visuel. Ce n'est pas un bug. Ceci est une fonctionnalité du web. Nouveaux navigateurs et anciens navigateurs; affichages monochromes et affichages multicolores; connexions rapides et connexions lentes; grands écrans, petits écrans et pas d'écrans; tout le monde peut accéder à votre contenu. Ce contenu devrait avoir un aspect différent dans des situations aussi variées. Si un site Web a la même apparence sur un navigateur vieux de dix ans que sur les appareils les plus récents, ils ne profitent sans doute pas de la grande souplesse qu'ils offrent.
+
+Pour souligner cela, le designer Dan Cederholm a créé un site Web pour répondre à la question «Les sites Web doivent-ils être exactement identiques dans tous les navigateurs?». Vous pouvez trouver la réponse à cette question à l'adresse URL suivante :
+
+dowebsitesneedtolookexactlythesameineverybrowser.com
+
+Au risque de vous gâcher la surprise, la réponse est un «non!» retentissant. Si vous visitez ce site Web, vous verrez cette réponse affichée avec fierté. Mais selon les capacités de votre navigateur, vous pourrez ou non voir certains des fioritures stylistiques appliquées à cette réponse en un seul mot. Même si vous n'obtenez aucun des styles, vous aurez toujours le contenu balisé en HTML sémantique.
+
+
+COUPER LA MOUTARDE
+
+Séparer la structure et la présentation est relativement simple. Vous pouvez déclarer tous les styles que vous voulez, tout en sachant que les navigateurs vont ignorer les choses qu’ils ne comprennent pas. Séparer la structure et le comportement n’est en revanche pas si simple. Si vous donner du JavaScript que ne comprends pas votre navigateur, il n’affichera pas d’une part le comportement désiré, mais il refusera aussi d’analyser le reste du JavaScript.
+
+Avant d’utiliser une fonctionnalité particulière de JavaScript, il vaut mieux s’assurer que celle-ci est supportée dans le navigateur. Cette vérification des fonctionnalités peut épargner aux visiteurs d’avoir une mauvaise expérience de navigation sur votre site internet suite à une fonctionnalité non-supportée. Si vous voulez utiliser Ajax, vérifiez d’abord que votre navigateur supporte l’objet que vous vous apprêter à utiliser pour activer cette fonctionnalité d’Ajax. Si vous voulez utiliser la géolocalisation API, vérifiez que votre navigateur la supporte.
+
+Une équipe de développeurs web travaillant sur le site internet de la BBC a surnommé ce type de détection de fonctionnalité par le fait de « couper la moutarde ». Les navigateurs qui « coupent la moutarde » obtiennent une expérience améliorée. Les navigateurs qui ne « coupent pas la moutarde » ont quant à eux toujours accès au contenu, mais sans les améliorations de JavaScript.
+
+La détection de fonctionnalité, couper la moutarde, ou comme vous voudrez l’appelez, est une technique simple. Disons que vous voulez traverser le DOM en utilisant querySelector et en attachant des évènements à quelques nœuds dans le document en utilisant addEventListener. Votre logique de couper la moutarde ressemblerait à quelque chose comme ça :
+
+if (document.querySelector &&
+window.addEventListener) {
+	// Enhance!
+}
+
+Il y a deux choses à noter ici :
+
+1.    Il s’agit d’une détection des fonctionnalités, pas de la détection du navigateur. À la place de demander « quel navigateur es-tu ? » et d’essayer d’en traduire le support à utiliser grâce à la réponse, il est plus simple de demander « est-ce que tu supportes cette fonctionnalité ? »
+
+2.    Il n’y a pas d’autres déclarations.
+
+AMÉLIORATION AGRESSIVE
+
+Retour à l’époque où les designers web essayaient d’exercer un contrôle semblable à l’impression sur les navigateurs internet, un design réussi se mesurait au pixel prêt: est-ce que le site internet à le même aspect sur tous les navigateurs ?
+À moins que tous les navigateurs supportaient cette fonctionnalité particulière-comme par exemple, les angles arrondis en CSS- alors cette fonctionnalité n’était pas discutable. À la place, les designers essayeraient de la cacher avec des balises et des images supplémentaires. Les sites web qui en résultaient manquaient d’une vraie structure. Il ne s’agissait non pas seulement d’un gaspillage du talent et de l’énergie venant des designers, c’était aussi un gaspillage des capacités des navigateurs internet modernes.
+L’augmentation des téléphones mobiles, des tablettes, et du design responsif a aidé à perdre cet état d’esprit fermé. Ce n’est plus réaliste d’excepter une égalité parfaite des pixels entre les appareils et les navigateurs. Mais vous continuerez à trouver des designers web se plaindre du fait qu’ils aient à supporter un vieux navigateur dépassé car une portion de leur audience continue à l’utiliser.
+Et ils ont absolument raison. Toute personne utilisant un vieux navigateur devrait avoir accès au même contenu qu’une personne utilisant le dernier des meilleurs navigateurs web. Mais cela ne veut pas dire qu’ils devraient avoir la même expérience. Comme Brad Frost a dit :
+
+    	« Il y a une différence entre le support et l’optimisation. »
+
+Supporter tous les navigateurs… mais optimiser pour aucun.
+
+Certains designers ont mal compris le fait que l’amélioration progressive voulait dire que toutes les fonctionnalités devaient être fournies à tous. C’est le contraire. L’amélioration progressive signifie fournir les fonctionnalités principales à tout le monde. Après cela, c’est le navigateur qui fait le reste. Loin de limiter les fonctionnalités que vous pouvez utiliser, l'amélioration progressive fournit aux designers web un moyen d'utiliser en toute sécurité les fonctionnalités les plus récentes et les plus performantes sans se soucier des anciens navigateurs. Scott Jehl de l'agence Filament Group le dit succinctement :
+
+    	« L’amélioration progressive nous permet de nous concentrer sur les coûts de créations des fonctionnalités pour les navigateurs modernes, sans trop se soucier du fait de laisser des gens de côté. Avec une code base fortement qualifiée, la prise en charge des anciens navigateurs est quasiment gratuite. »
+
+Si un site internet est construit en utilisant l’amélioration progressive alors c’est ok si une fonctionnalité particulière n’est pas supportée ou échoue au chargement : Ajax, géolocalisation, quoi que ce soit. Tant que les fonctionnalités de base sont toujours disponibles, les designers web n’ont pas besoin de rebrousser chemin pour essayer de faire passer de force de nouvelles fonctionnalités dans d’anciens navigateurs.
+
+Vous obtenez également un site Web plus résistant au modèle de traitement des erreurs de JavaScript. Mat Marquis a travaillé avec Scott Jehl sur le site internet responsif du Boston Globe. Il a noté :
+
+    	« Un grand nombre de fonctionnalités cools sur le Boston Globe ne fonctionnent plus lorsque JS s’arrête : « reading the news » n’en fait pas parti. »
+
+L'astuce consiste à identifier ce qui est considéré comme une fonctionnalité principale et ce qui est considéré comme une amélioration.
+
+</p>
+
+</body>
+</html>
